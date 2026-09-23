@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library — QUE Stage</title>
+<meta name="description" content="Free FX and colour palettes for QUE Stage.">
+<style>
+  /* Same look as index.html; one self-contained file, nothing loads from outside. */
+  :root {
+    --bg: #0b0b0c;
+    --panel: #151517;
+    --line: #2a2a2e;
+    --text: #ebe7df;
+    --muted: #9a968e;
+    --accent: #ffb547;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+  header { border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { color: var(--text); font-size: 20px; letter-spacing: .02em; }
+  .logo b { font-weight: 800; }
+  .logo span { font-weight: 300; color: var(--muted); }
+  .logo:hover { text-decoration: none; }
+  nav a { color: var(--muted); margin-left: 20px; font-size: 15px; }
+  nav a:hover, nav a.on { color: var(--text); text-decoration: none; }
+
+  .hero { padding: 72px 0 48px; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+         background: var(--accent); box-shadow: 0 0 18px var(--accent); margin-right: 10px; vertical-align: middle; }
+  .eyebrow { color: var(--muted); font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
+  h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.08; margin: 16px 0 16px; font-weight: 800; }
+  h1 span { font-weight: 300; color: var(--muted); }
+  .lead { font-size: 18px; color: var(--muted); max-width: 620px; margin: 0; }
+  .path { color: var(--text); white-space: nowrap; }
+
+  section { padding: 44px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 22px; margin: 0 0 20px; }
+  h3 { font-size: 17px; margin: 14px 0 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+  .grid.pal { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px;
+          display: flex; flex-direction: column; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .card p.items { color: var(--text); font-size: 14px; margin-top: 10px; }
+  .meta span { white-space: nowrap; }
+  .meta { flex-wrap: wrap; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+          margin-top: auto; padding-top: 16px; font-size: 13px; color: var(--muted); }
+
+  .wave { width: 100%; height: 48px; display: block; background: #0f0f11; border-radius: 8px; }
+  .wave path { fill: none; stroke: var(--accent); stroke-width: 2; vector-effect: non-scaling-stroke;
+               filter: drop-shadow(0 0 4px rgba(255,181,71,.55)); }
+  .swatches { display: flex; height: 48px; border-radius: 8px; overflow: hidden; }
+  .swatches span { flex: 1; }
+
+  .btn { display: inline-block; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 600;
+         letter-spacing: .04em; text-transform: uppercase; background: var(--accent); color: #1a1206; }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  /* Until the pack files are published, the button is shown but inactive. */
+  code { font-size: .92em; color: var(--text); }
+  .btn.soon { background: transparent; color: var(--muted); border: 1px solid var(--line); cursor: default; }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;
+           list-style: none; padding: 0; margin: 0; counter-reset: s; }
+  .steps li { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+  .steps svg { width: 28px; height: 28px; stroke: var(--accent); fill: none; stroke-width: 1.8;
+               stroke-linecap: round; stroke-linejoin: round; }
+  .steps h3 { margin-top: 10px; }
+  .steps p { margin: 0; color: var(--muted); font-size: 15px; }
+  .steps li::before { counter-increment: s; content: counter(s); float: right; color: var(--muted); font-size: 13px; }
+
+  .share { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+           border-radius: 12px; padding: 20px 22px; }
+  .share p { margin: 0 0 6px; }
+  .share .note { color: var(--muted); font-size: 14px; margin: 0; }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
+  footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>QUE</b> <span>Stage</span></a>
+    <nav>
+      <a class="on" href="library.html">Library</a>
+      <a href="index.html#support">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow"><span class="dot"></span>Free downloads</div>
+    <h1>QUE Stage <span>Library</span></h1>
+    <p class="lead">Free FX and colour palettes for QUE Stage. Download, then in QUE: <span class="path">Menu → FILE → IMPORT</span>.</p>
+  </div>
+
+  <section>
+    <h2>FX packs</h2>
+    <div class="grid">
+      <article class="card">
+        <svg class="wave" viewBox="0 0 240 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0,42 C30,42 30,6 60,6 S90,42 120,42 S150,6 180,6 S210,42 240,42"/></svg>
+        <h3>Theatre Basics</h3>
+        <p>Calm, natural looks for drama: slow breaths, flickering flames, dawn and dusk.</p>
+        <p class="items">Breathe · Candle · Fireplace · Sunrise · Sunset</p>
+        <div class="meta"><span>5 effects · .quefx</span>
+          <span class="btn soon" data-file="library/theatre-basics.quefx" aria-disabled="true">Coming soon</span></div>
+      </article>
+      <article class="card">
+        <svg class="wave" viewBox="0 0 240 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0,42 H8 V6 H16 V42 H32 V6 H40 V42 H56 V6 H64 V42 H80 V6 H88 V42 H104 V6 H112 V42 H128 V6 H136 V42 H152 V6 H160 V42 H176 V6 H184 V42 H200 V6 H208 V42 H224 V6 H232 V42 H240"/></svg>
+        <h3>Concert Hits</h3>
+        <p>Punchy, rhythmic effects for live music and parties.</p>
+        <p class="items">Strobe · Police · Disco · Party · Beat 120</p>
+        <div class="meta"><span>5 effects · .quefx</span>
+          <span class="btn soon" data-file="library/concert-hits.quefx" aria-disabled="true">Coming soon</span></div>
+      </article>
+      <article class="card">
+        <svg class="wave" viewBox="0 0 240 48" preserveAspectRatio="none" aria-hidden="true"><path d="M0,19.3 L5,14.2 L10,14.0 L15,17.2 L20,19.2 L25,18.3 L30,17.1 L35,18.0 L40,19.3 L45,17.4 L50,12.1 L55,7.7 L60,7.8 L65,11.2 L70,14.0 L75,15.3 L80,18.0 L85,23.9 L90,30.2 L95,32.5 L100,30.4 L105,27.9 L110,28.2 L115,29.8 L120,29.6 L125,27.9 L130,28.5 L135,33.3 L140,39.0 L145,41.0 L150,38.9 L155,36.3 L160,35.3 L165,33.8 L170,28.9 L175,22.0 L180,17.8 L185,18.4 L190,21.0 L195,21.4 L200,19.8 L205,19.2 L210,20.9 L215,21.5 L220,17.8 L225,11.6 L230,7.6 L235,7.9 L240,10.0"/></svg>
+        <h3>Nature</h3>
+        <p>Slow, organic movement inspired by water, sky and weather.</p>
+        <p class="items">Ocean · Aurora · Thunderstorm · Cloudy · Underwater</p>
+        <div class="meta"><span>5 effects · .quefx</span>
+          <span class="btn soon" data-file="library/nature.quefx" aria-disabled="true">Coming soon</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Palette packs</h2>
+    <div class="grid pal">
+      <article class="card">
+        <div class="swatches" aria-hidden="true"><span style="background:#ffb547"></span><span style="background:#ff9a3c"></span><span style="background:#ffc98a"></span><span style="background:#ff7b54"></span><span style="background:#ffe0b0"></span></div>
+        <h3>Warm Stage</h3>
+        <p>Tungsten-style warmth for faces and interiors.</p>
+        <div class="meta"><span>5 colours · .quepal</span>
+          <span class="btn soon" data-file="library/warm-stage.quepal" aria-disabled="true">Coming soon</span></div>
+      </article>
+      <article class="card">
+        <div class="swatches" aria-hidden="true"><span style="background:#1e3a8a"></span><span style="background:#3b5bdb"></span><span style="background:#6c8cff"></span><span style="background:#8fd3ff"></span><span style="background:#5b3fa8"></span></div>
+        <h3>Cool Night</h3>
+        <p>Moonlight, dusk and deep blue exteriors.</p>
+        <div class="meta"><span>5 colours · .quepal</span>
+          <span class="btn soon" data-file="library/cool-night.quepal" aria-disabled="true">Coming soon</span></div>
+      </article>
+      <article class="card">
+        <div class="swatches" aria-hidden="true"><span style="background:#ff2bd6"></span><span style="background:#8a2bff"></span><span style="background:#00e5ff"></span><span style="background:#39ff14"></span><span style="background:#ff3860"></span></div>
+        <h3>Neon</h3>
+        <p>Saturated club colours that pop on camera.</p>
+        <div class="meta"><span>5 colours · .quepal</span>
+          <span class="btn soon" data-file="library/neon.quepal" aria-disabled="true">Coming soon</span></div>
+      </article>
+      <article class="card">
+        <div class="swatches" aria-hidden="true"><span style="background:#0f766e"></span><span style="background:#14b8a6"></span><span style="background:#f59e0b"></span><span style="background:#ea580c"></span><span style="background:#a8a29e"></span></div>
+        <h3>Film Look</h3>
+        <p>Teal and orange with muted, cinematic tones.</p>
+        <div class="meta"><span>5 colours · .quepal</span>
+          <span class="btn soon" data-file="library/film-look.quepal" aria-disabled="true">Coming soon</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>How to install</h2>
+    <ol class="steps">
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+        <h3>Download</h3>
+        <p>Pick a pack and download the <code>.quefx</code> or <code>.quepal</code> file.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        <h3>Import in QUE</h3>
+        <p>Open <span class="path">Menu → FILE → IMPORT FX</span> or <span class="path">IMPORT PALETTES</span> and choose the file.</p>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        <h3>Done — nothing is replaced</h3>
+        <p>New items are added to your library. If a name already exists, the new one is added as “(2)”. Nothing is deleted.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Share your own</h2>
+    <div class="share">
+      <p>Made an FX you’re proud of? Send the <code>.quefx</code> file to <a href="mailto:info@matukufilm.com">info@matukufilm.com</a> and we may add it to the Library.</p>
+      <p class="note">There are no accounts or online uploads — just email.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Files contain only effect / colour definitions — no personal data, no Bridge information.</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="mailto:info@matukufilm.com">info@matukufilm.com</a></p>
+    <p>© 2026 QUE Stage. Philips Hue is a trademark of Signify. QUE Stage is an independent product and is not affiliated with or endorsed by Signify.</p>
+  </div>
+</footer>
+
+</body>
+</html>
