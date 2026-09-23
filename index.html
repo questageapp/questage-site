@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QUE Stage</title>
+<meta name="description" content="QUE Stage — stage lighting control for Philips Hue. Design complicated. Operate simple.">
+<style>
+  /* One self-contained file: nothing loads from outside, so the page never breaks. */
+  :root {
+    --bg: #0b0b0c;
+    --panel: #151517;
+    --line: #2a2a2e;
+    --text: #ebe7df;
+    --muted: #9a968e;
+    --accent: #ffb547; /* warm "cue light" amber */
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  header { border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .logo { color: var(--text); font-size: 20px; letter-spacing: .02em; }
+  .logo b { font-weight: 800; }
+  .logo span { font-weight: 300; color: var(--muted); }
+  .logo:hover { text-decoration: none; }
+  nav a { color: var(--muted); margin-left: 20px; font-size: 15px; }
+  nav a:hover { color: var(--text); text-decoration: none; }
+
+  .hero { padding: 96px 0 72px; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%;
+         background: var(--accent); box-shadow: 0 0 18px var(--accent); margin-right: 10px; vertical-align: middle; }
+  .eyebrow { color: var(--muted); font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
+  h1 { font-size: clamp(40px, 8vw, 64px); line-height: 1.05; margin: 18px 0 20px; font-weight: 800; }
+  h1 span { font-weight: 300; color: var(--muted); }
+  .lead { font-size: 19px; color: var(--muted); max-width: 560px; margin: 0; }
+
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 22px; margin: 0 0 20px; }
+  h3 { font-size: 16px; margin: 0 0 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 18px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  ul.plain { padding-left: 18px; color: var(--muted); }
+  .support-box { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+                 border-radius: 12px; padding: 20px 22px; }
+  .support-box p { margin: 0 0 8px; }
+  .mail { font-size: 18px; font-weight: 600; }
+  .tr { color: var(--muted); }
+
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 13px; }
+  footer p { margin: 4px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html"><b>QUE</b> <span>Stage</span></a>
+    <nav>
+      <a href="#support">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="eyebrow"><span class="dot"></span>Stage lighting for Philips Hue</div>
+    <h1>QUE <span>Stage</span></h1>
+    <p class="lead">Design complicated. Operate simple.<br>
+      A small, reliable lighting-control system for theatre, concerts and live performance — built on Philips Hue.</p>
+  </div>
+
+  <section>
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="card"><h3>Cues</h3><p>Build looks, save them as cues and run the show with GO and BACK.</p></div>
+      <div class="card"><h3>Fixtures, not bulbs</h3><p>Design with stage positions. Swap a lamp without rewriting your show.</p></div>
+      <div class="card"><h3>Blackout</h3><p>One reliable button, always available.</p></div>
+      <div class="card"><h3>Local &amp; private</h3><p>Runs on your own network. No account, no cloud.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Requirements</h2>
+    <ul class="plain">
+      <li>Philips Hue Bridge on the same local network</li>
+      <li>Philips Hue lights</li>
+      <li>iPad</li>
+    </ul>
+  </section>
+
+  <section id="support">
+    <h2>Support</h2>
+    <div class="support-box">
+      <p>Questions, problems or feedback? Write to us:</p>
+      <p><a class="mail" href="mailto:info@matukufilm.com">info@matukufilm.com</a></p>
+      <p class="tr">Soru, sorun veya geri bildirim için bize yazın. Türkçe ya da İngilizce yazabilirsiniz.</p>
+    </div>
+    <p style="color:var(--muted);font-size:15px;margin-top:18px;">
+      When reporting a problem, it helps to include your iPad model, iPadOS version and a short description of what happened.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="mailto:info@matukufilm.com">info@matukufilm.com</a></p>
+    <p>© 2026 QUE Stage. Philips Hue is a trademark of Signify. QUE Stage is an independent product and is not affiliated with or endorsed by Signify.</p>
+  </div>
+</footer>
+
+</body>
+</html>
