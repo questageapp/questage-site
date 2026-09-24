@@ -1,0 +1,194 @@
+{
+  "format": "que-fx",
+  "version": 1,
+  "fx": [
+    {
+      "name": "Ocean",
+      "notes": "Deep blue to teal, slow swells rolling across the selection like waves.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "SINE",
+            "min": 20,
+            "max": 75,
+            "periodMs": 7000
+          },
+          {
+            "parameter": "HUE",
+            "shape": "SINE",
+            "min": 185,
+            "max": 230,
+            "periodMs": 11000
+          },
+          {
+            "parameter": "SATURATION",
+            "shape": "SINE",
+            "min": 70,
+            "max": 100,
+            "periodMs": 5000
+          }
+        ],
+        "spread": {
+          "mode": "FORWARD",
+          "degrees": 300
+        }
+      }
+    },
+    {
+      "name": "Aurora",
+      "notes": "Slow green–teal–violet curtains drifting across the lamps.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "HUE",
+            "shape": "SINE",
+            "min": 120,
+            "max": 280,
+            "periodMs": 12000
+          },
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "SINE",
+            "min": 25,
+            "max": 70,
+            "periodMs": 9000
+          },
+          {
+            "parameter": "SATURATION",
+            "shape": "SINE",
+            "min": 60,
+            "max": 100,
+            "periodMs": 7000
+          }
+        ],
+        "spread": {
+          "mode": "FORWARD",
+          "degrees": 270
+        }
+      }
+    },
+    {
+      "name": "Thunderstorm",
+      "notes": "Dark sky, double flashes of cold light, lamps at different moments.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "CUSTOM",
+            "min": 0,
+            "max": 100,
+            "periodMs": 7000,
+            "points": [
+              {
+                "t": 0,
+                "v": 0.06,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.4,
+                "v": 1,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.415,
+                "v": 0.1,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.44,
+                "v": 0.8,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.46,
+                "v": 0.06,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.8,
+                "v": 1,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.815,
+                "v": 0.06,
+                "curve": "STEP"
+              }
+            ]
+          },
+          {
+            "parameter": "CT",
+            "shape": "SQUARE",
+            "min": 6500,
+            "max": 6500,
+            "periodMs": 7000
+          }
+        ],
+        "spread": {
+          "mode": "FORWARD",
+          "degrees": 200
+        }
+      }
+    },
+    {
+      "name": "Cloudy",
+      "notes": "Daylight with clouds drifting past the sun: slow soft dips, cool tint changing.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "FLICKER",
+            "min": 45,
+            "max": 100,
+            "periodMs": 4500
+          },
+          {
+            "parameter": "CT",
+            "shape": "SINE",
+            "min": 5000,
+            "max": 6500,
+            "periodMs": 16000
+          }
+        ],
+        "spread": {
+          "mode": "FORWARD",
+          "degrees": 180
+        }
+      }
+    },
+    {
+      "name": "Underwater",
+      "notes": "Blue–teal water with rippling light, like sun through the surface (like Hue's Underwater).",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "HUE",
+            "shape": "SINE",
+            "min": 175,
+            "max": 215,
+            "periodMs": 9000
+          },
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "FLICKER",
+            "min": 40,
+            "max": 75,
+            "periodMs": 800
+          },
+          {
+            "parameter": "SATURATION",
+            "shape": "SINE",
+            "min": 75,
+            "max": 100,
+            "periodMs": 6000
+          }
+        ],
+        "spread": {
+          "mode": "FORWARD",
+          "degrees": 300
+        }
+      }
+    }
+  ]
+}

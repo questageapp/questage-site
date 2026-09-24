@@ -1,0 +1,51 @@
+{
+  "format": "que-palettes",
+  "version": 1,
+  "palettes": [
+    {
+      "name": "Cool Night Navy",
+      "state": {
+        "color": {
+          "hue": 224,
+          "saturation": 78
+        }
+      }
+    },
+    {
+      "name": "Cool Night Blue",
+      "state": {
+        "color": {
+          "hue": 228,
+          "saturation": 73
+        }
+      }
+    },
+    {
+      "name": "Cool Night Periwinkle",
+      "state": {
+        "color": {
+          "hue": 227,
+          "saturation": 58
+        }
+      }
+    },
+    {
+      "name": "Cool Night Sky",
+      "state": {
+        "color": {
+          "hue": 204,
+          "saturation": 44
+        }
+      }
+    },
+    {
+      "name": "Cool Night Violet",
+      "state": {
+        "color": {
+          "hue": 256,
+          "saturation": 63
+        }
+      }
+    }
+  ]
+}

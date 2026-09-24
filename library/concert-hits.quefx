@@ -1,0 +1,247 @@
+{
+  "format": "que-fx",
+  "version": 1,
+  "fx": [
+    {
+      "name": "Strobe",
+      "notes": "Hard on/off. Best with streaming; over REST it is limited to a slow blink.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "SQUARE",
+            "min": 0,
+            "max": 100,
+            "periodMs": 200,
+            "duty": 0.3
+          }
+        ]
+      }
+    },
+    {
+      "name": "Police",
+      "notes": "Red / blue with double flashes; neighbours opposite.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "CUSTOM",
+            "min": 0,
+            "max": 100,
+            "periodMs": 1000,
+            "points": [
+              {
+                "t": 0,
+                "v": 1,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.1,
+                "v": 0,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.18,
+                "v": 1,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.28,
+                "v": 0,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.5,
+                "v": 1,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.6,
+                "v": 0,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.68,
+                "v": 1,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.78,
+                "v": 0,
+                "curve": "STEP"
+              }
+            ]
+          },
+          {
+            "parameter": "HUE",
+            "shape": "SQUARE",
+            "min": 0,
+            "max": 240,
+            "periodMs": 1000,
+            "duty": 0.5
+          },
+          {
+            "parameter": "SATURATION",
+            "shape": "SQUARE",
+            "min": 100,
+            "max": 100,
+            "periodMs": 1000
+          }
+        ],
+        "spread": {
+          "mode": "ALTERNATE",
+          "degrees": 180
+        }
+      }
+    },
+    {
+      "name": "Disco",
+      "notes": "Hard colour changes, every lamp a different colour.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "HUE",
+            "shape": "CUSTOM",
+            "min": 0,
+            "max": 360,
+            "periodMs": 3000,
+            "points": [
+              {
+                "t": 0,
+                "v": 0,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.17,
+                "v": 0.33,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.33,
+                "v": 0.66,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.5,
+                "v": 0.15,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.67,
+                "v": 0.83,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.83,
+                "v": 0.5,
+                "curve": "STEP"
+              }
+            ]
+          }
+        ],
+        "spread": {
+          "mode": "FORWARD",
+          "degrees": 360
+        }
+      }
+    },
+    {
+      "name": "Party",
+      "notes": "Saturated colours jumping with the beat, every lamp a different colour.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "HUE",
+            "shape": "CUSTOM",
+            "min": 0,
+            "max": 360,
+            "periodMs": 700,
+            "mode": "RANDOM",
+            "points": [
+              {
+                "t": 0,
+                "v": 0,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.17,
+                "v": 0.17,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.33,
+                "v": 0.33,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.5,
+                "v": 0.5,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.67,
+                "v": 0.67,
+                "curve": "STEP"
+              },
+              {
+                "t": 0.83,
+                "v": 0.83,
+                "curve": "STEP"
+              }
+            ]
+          },
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "CUSTOM",
+            "min": 60,
+            "max": 100,
+            "periodMs": 700,
+            "points": [
+              {
+                "t": 0,
+                "v": 1,
+                "curve": "EASE_OUT"
+              },
+              {
+                "t": 0.8,
+                "v": 0.3,
+                "curve": "STEP"
+              }
+            ]
+          }
+        ],
+        "spread": {
+          "mode": "ALTERNATE",
+          "degrees": 180
+        }
+      }
+    },
+    {
+      "name": "Beat 120",
+      "notes": "Punch and decay on every beat at 120 BPM (use SPEED for other tempos).",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "CUSTOM",
+            "min": 10,
+            "max": 100,
+            "periodMs": 500,
+            "points": [
+              {
+                "t": 0,
+                "v": 1,
+                "curve": "EASE_OUT"
+              },
+              {
+                "t": 0.7,
+                "v": 0,
+                "curve": "STEP"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

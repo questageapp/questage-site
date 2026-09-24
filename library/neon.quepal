@@ -1,0 +1,51 @@
+{
+  "format": "que-palettes",
+  "version": 1,
+  "palettes": [
+    {
+      "name": "Neon Pink",
+      "state": {
+        "color": {
+          "hue": 312,
+          "saturation": 83
+        }
+      }
+    },
+    {
+      "name": "Neon Purple",
+      "state": {
+        "color": {
+          "hue": 267,
+          "saturation": 83
+        }
+      }
+    },
+    {
+      "name": "Neon Cyan",
+      "state": {
+        "color": {
+          "hue": 186,
+          "saturation": 100
+        }
+      }
+    },
+    {
+      "name": "Neon Green",
+      "state": {
+        "color": {
+          "hue": 111,
+          "saturation": 92
+        }
+      }
+    },
+    {
+      "name": "Neon Red",
+      "state": {
+        "color": {
+          "hue": 348,
+          "saturation": 78
+        }
+      }
+    }
+  ]
+}

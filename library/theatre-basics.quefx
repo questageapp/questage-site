@@ -1,0 +1,128 @@
+{
+  "format": "que-fx",
+  "version": 1,
+  "fx": [
+    {
+      "name": "Breathe",
+      "notes": "Slow brightness breathing, all together.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "SINE",
+            "min": 20,
+            "max": 100,
+            "periodMs": 4000
+          }
+        ]
+      }
+    },
+    {
+      "name": "Candle",
+      "notes": "Soft warm candle glow, gently wavering, every lamp different (like Hue's Candle).",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "FLICKER",
+            "min": 55,
+            "max": 85,
+            "periodMs": 450
+          },
+          {
+            "parameter": "CT",
+            "shape": "FLICKER",
+            "min": 2000,
+            "max": 2300,
+            "periodMs": 1600
+          }
+        ],
+        "spread": {
+          "mode": "FORWARD",
+          "degrees": 360
+        }
+      }
+    },
+    {
+      "name": "Fireplace",
+      "notes": "Deep orange–red fire, livelier than Candle, lamps casting different light.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "FLICKER",
+            "min": 35,
+            "max": 95,
+            "periodMs": 300
+          },
+          {
+            "parameter": "HUE",
+            "shape": "FLICKER",
+            "min": 8,
+            "max": 30,
+            "periodMs": 700
+          },
+          {
+            "parameter": "SATURATION",
+            "shape": "FLICKER",
+            "min": 85,
+            "max": 100,
+            "periodMs": 900
+          }
+        ],
+        "spread": {
+          "mode": "FORWARD",
+          "degrees": 360
+        }
+      }
+    },
+    {
+      "name": "Sunrise",
+      "notes": "30 s: from dark warm glow to bright daylight white, then stays.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "SAW_UP",
+            "min": 0,
+            "max": 100,
+            "periodMs": 30000,
+            "mode": "HOLD"
+          },
+          {
+            "parameter": "CT",
+            "shape": "SAW_UP",
+            "min": 2000,
+            "max": 5000,
+            "periodMs": 30000,
+            "mode": "HOLD"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Sunset",
+      "notes": "30 s: from daylight to a low warm glow, then dark.",
+      "spec": {
+        "tracks": [
+          {
+            "parameter": "BRIGHTNESS",
+            "shape": "SAW_DOWN",
+            "min": 0,
+            "max": 100,
+            "periodMs": 30000,
+            "mode": "HOLD"
+          },
+          {
+            "parameter": "CT",
+            "shape": "SAW_DOWN",
+            "min": 2000,
+            "max": 5000,
+            "periodMs": 30000,
+            "mode": "HOLD"
+          }
+        ]
+      }
+    }
+  ]
+}

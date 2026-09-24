@@ -1,0 +1,51 @@
+{
+  "format": "que-palettes",
+  "version": 1,
+  "palettes": [
+    {
+      "name": "Warm Stage Amber",
+      "state": {
+        "color": {
+          "hue": 36,
+          "saturation": 72
+        }
+      }
+    },
+    {
+      "name": "Warm Stage Orange",
+      "state": {
+        "color": {
+          "hue": 29,
+          "saturation": 76
+        }
+      }
+    },
+    {
+      "name": "Warm Stage Peach",
+      "state": {
+        "color": {
+          "hue": 32,
+          "saturation": 46
+        }
+      }
+    },
+    {
+      "name": "Warm Stage Coral",
+      "state": {
+        "color": {
+          "hue": 14,
+          "saturation": 67
+        }
+      }
+    },
+    {
+      "name": "Warm Stage Straw",
+      "state": {
+        "color": {
+          "hue": 36,
+          "saturation": 31
+        }
+      }
+    }
+  ]
+}

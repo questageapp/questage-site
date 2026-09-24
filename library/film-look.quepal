@@ -1,0 +1,51 @@
+{
+  "format": "que-palettes",
+  "version": 1,
+  "palettes": [
+    {
+      "name": "Film Look Deep Teal",
+      "state": {
+        "color": {
+          "hue": 175,
+          "saturation": 87
+        }
+      }
+    },
+    {
+      "name": "Film Look Teal",
+      "state": {
+        "color": {
+          "hue": 173,
+          "saturation": 89
+        }
+      }
+    },
+    {
+      "name": "Film Look Amber",
+      "state": {
+        "color": {
+          "hue": 38,
+          "saturation": 96
+        }
+      }
+    },
+    {
+      "name": "Film Look Orange",
+      "state": {
+        "color": {
+          "hue": 21,
+          "saturation": 95
+        }
+      }
+    },
+    {
+      "name": "Film Look Stone",
+      "state": {
+        "color": {
+          "hue": 24,
+          "saturation": 6
+        }
+      }
+    }
+  ]
+}
