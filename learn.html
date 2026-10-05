@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn — QUE Stage</title>
+<meta name="description" content="Short guides for QUE Stage: connect your Hue Bridge, patch your lights, build your first cue and run the show.">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="index.html" aria-label="QUE Stage home"><b>QUE</b><span>Stage</span></a>
+    <nav aria-label="Main">
+      <a href="experience.html">Experience</a>
+      <a href="learn.html" aria-current="page">Learn</a>
+      <a href="library.html">Library</a>
+      <a href="index.html#support">Support</a>
+      <a class="btn primary" href="index.html#get">Get the app</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap learn">
+  <nav aria-label="Guides">
+    <div>
+      <p class="eyebrow">Getting started</p>
+      <a href="#connect"><span class="mono">01</span>Connect your Hue Bridge</a>
+      <a href="#patch"><span class="mono">02</span>Patch your lights</a>
+      <a href="#cue"><span class="mono">03</span>Build your first cue</a>
+      <a href="#show"><span class="mono">04</span>Run the show</a>
+    </div>
+    <div>
+      <p class="eyebrow">More</p>
+      <a href="#import"><span class="mono">05</span>Import palettes and FX</a>
+      <a href="#network"><span class="mono">06</span>Local Network permission</a>
+    </div>
+  </nav>
+
+  <article>
+    <div class="tryit">
+      <span>Every guide works on the virtual stage too. No Bridge, no lamps.</span>
+      <a class="btn light" href="experience.html">Open the Experience</a>
+    </div>
+
+    <section class="guide" id="connect">
+      <p class="eyebrow">Guide 01</p>
+      <h2>Connect your Hue Bridge</h2>
+      <p>QUE Stage runs on a Mac and talks to your Hue Bridge over your own network. Your iPad or iPhone then controls the show.</p>
+      <ol>
+        <li><div><h3>Same network</h3><p>Put the Mac, the Hue Bridge and the device you will run the show from on the same Wi-Fi or wired network.</p></div></li>
+        <li><div><h3>Open QUE Stage on the Mac</h3><p>It looks for Hue Bridges on your network. Choose yours from the list.</p></div></li>
+        <li><div><h3>Press the link button</h3><p>When QUE asks, press the round button on top of the Hue Bridge. The Bridge gives QUE an access key, which stays on your Mac.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="guide" id="patch">
+      <p class="eyebrow">Guide 02</p>
+      <h2>Patch your lights</h2>
+      <p>In QUE you design with fixtures — stage positions such as Front left or Top spot — not with bulbs. The patch says which lamp plays which fixture.</p>
+      <ol>
+        <li><div><h3>Create fixtures</h3><p>Open PATCH and add one fixture for each position on your stage. Give it a clear name and tags such as #front.</p></div></li>
+        <li><div><h3>Assign a lamp</h3><p>Pick the Hue lamp that hangs in that position. Use IDENTIFY to see which lamp is which.</p></div></li>
+        <li><div><h3>Swap later without rewriting</h3><p>If a bulb fails, assign a new lamp to the same fixture. Every cue stays as it was.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="guide" id="cue">
+      <p class="eyebrow">Guide 03</p>
+      <h2>Build your first cue</h2>
+      <p>A cue is a saved look: every light's colour and brightness, plus the time it takes to fade in. You make the look on LIVE, then CAPTURE it.</p>
+      <ol>
+        <li><div><h3>Select lights</h3><p>On LIVE, tap a tile — or a group chip such as #front — to choose what you control.</p></div></li>
+        <li><div><h3>Set the look</h3><p>Use Brightness and Colour in the panel on the right. The stage changes as you move.</p></div></li>
+        <li><div><h3>CAPTURE</h3><p>Press CAPTURE. QUE saves the look as the next cue and gives it a number.</p></div></li>
+        <li><div><h3>Name it and set the fade</h3><p>Open the cue, give it a name such as Morning and set how long it takes to arrive, for example 2.50 s.</p></div></li>
+      </ol>
+      <div class="good">
+        <p class="eyebrow">Good to know</p>
+        <p>Changing a light after CAPTURE does not change the cue. To keep the change, press UPDATE.</p>
+      </div>
+    </section>
+
+    <section class="guide" id="show">
+      <p class="eyebrow">Guide 04</p>
+      <h2>Run the show</h2>
+      <p>On show night you only need three buttons.</p>
+      <ol>
+        <li><div><h3>GO</h3><p>Runs the next cue with its fade. NOW shows what is on stage, NEXT shows what GO will run.</p></div></li>
+        <li><div><h3>BACK</h3><p>Steps back to the previous cue.</p></div></li>
+        <li><div><h3>BLACKOUT</h3><p>Takes every light out at once. Press RELEASE to bring the look back.</p></div></li>
+      </ol>
+      <p>Open SHOW for a full-screen view with large NOW, NEXT and GO.</p>
+    </section>
+
+    <section class="guide" id="import">
+      <p class="eyebrow">Guide 05</p>
+      <h2>Import palettes and FX</h2>
+      <p>The <a href="library.html">Library</a> has free palette and FX packs.</p>
+      <ol>
+        <li><div><h3>Download</h3><p>Pick a pack and download the <span class="kbd">.quefx</span> or <span class="kbd">.quepal</span> file.</p></div></li>
+        <li><div><h3>Import</h3><p>In QUE, open <span class="kbd">Menu → FILE → IMPORT FX</span> or <span class="kbd">IMPORT PALETTES</span> and choose the file.</p></div></li>
+        <li><div><h3>Nothing is replaced</h3><p>New items are added to your library. If a name already exists, the new one is added as “(2)”.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="guide" id="network">
+      <p class="eyebrow">Guide 06</p>
+      <h2>Local Network permission</h2>
+      <p>To find your Hue Bridge, QUE Stage needs permission to use your local network. It is used only to control your lights.</p>
+      <ol>
+        <li><div><h3>Allow when asked</h3><p>The first time QUE looks for your Bridge, your device asks for Local Network access. Choose Allow.</p></div></li>
+        <li><div><h3>If you chose Don’t Allow</h3><p>Open the Settings app, go to Privacy &amp; Security → Local Network and turn QUE Stage on.</p></div></li>
+        <li><div><h3>Still no Bridge?</h3><p>Check that the device and the Bridge are on the same network, then write to <a href="mailto:info@matukufilm.com">info@matukufilm.com</a>.</p></div></li>
+      </ol>
+    </section>
+  </article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p><a href="index.html#support">Support</a> · <a href="privacy.html">Privacy Policy</a> · <a href="mailto:info@matukufilm.com">info@matukufilm.com</a></p>
+    <p>© 2026 QUE Stage. Philips Hue is a trademark of Signify. QUE Stage is an independent product and is not affiliated with or endorsed by Signify.</p>
+  </div>
+</footer>
+</body>
+</html>
