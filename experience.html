@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience — QUE Stage</title>
+<meta name="description" content="Try QUE Stage in your browser: six virtual lights, a cue list, GO and BLACKOUT. No lights needed.">
+<meta name="theme-color" content="#09090b">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/experience.css">
+</head>
+<body class="dark xp">
+
+<header class="xp-top">
+  <div class="xp-top-l">
+    <a class="wordmark" href="index.html"><b>QUE</b><span>Stage</span></a>
+    <span class="xp-sep" aria-hidden="true"></span>
+    <h1 class="xp-title">Experience</h1>
+    <span class="badge">DEMO</span>
+  </div>
+  <div class="xp-top-r">
+    <span class="xp-hint">No lights needed</span>
+    <a class="btn ghost-dark" href="index.html">Back to site</a>
+  </div>
+</header>
+
+<div class="xp-body">
+  <main class="xp-main">
+    <section class="coach" aria-live="polite">
+      <div>
+        <p class="eyebrow" id="coach-label">TRY IT · 1 / 5</p>
+        <p class="coach-text" id="coach-text">Press GO to run the first cue.</p>
+      </div>
+      <div class="coach-r">
+        <span class="dots" id="dots" aria-hidden="true"></span>
+        <button type="button" class="btn ghost-dark" id="restart">Start over</button>
+      </div>
+    </section>
+
+    <div class="stage-wrap">
+      <div id="stage"></div>
+      <div class="bo-banner" id="bo-banner" role="status" hidden>BLACKOUT — every light is out. Press RELEASE to bring them back.</div>
+    </div>
+
+    <section class="panel">
+      <div class="panel-head">
+        <span class="eyebrow">Cue list</span>
+        <span class="mono subtle" id="cue-count"></span>
+      </div>
+      <ol class="cues" id="cues"></ol>
+    </section>
+  </main>
+
+  <aside class="panel inspector" aria-label="Selection">
+    <div>
+      <p class="eyebrow">Selection</p>
+      <p class="sel-name" id="sel-name">Front left</p>
+    </div>
+    <div class="fixtures" id="fixtures"></div>
+    <button type="button" class="btn dashed" id="select-all">Select all</button>
+
+    <div class="field">
+      <div class="field-head">
+        <label for="level">Brightness</label>
+        <span class="value mono" id="level-value">0 %</span>
+      </div>
+      <input type="range" id="level" min="0" max="100" step="1" value="0">
+    </div>
+
+    <div class="field">
+      <span class="field-label">Colour</span>
+      <div class="swatches" id="swatches"></div>
+    </div>
+
+    <button type="button" class="verb capture" id="capture">CAPTURE</button>
+    <p class="small subtle">CAPTURE saves what the stage shows now as the next cue.</p>
+  </aside>
+</div>
+
+<footer class="transport">
+  <button type="button" class="verb blackout" id="blackout">BLACKOUT</button>
+  <div class="nownext">
+    <div class="nn"><small class="now">NOW</small><span id="now">—</span></div>
+    <div class="nn"><small>NEXT</small><span class="next" id="next">—</span></div>
+  </div>
+  <button type="button" class="verb back" id="back">BACK</button>
+  <button type="button" class="verb go" id="go">GO</button>
+</footer>
+
+<!-- Recording frame for Instagram (open experience.html?reel). Hidden on the normal page. -->
+<div class="reel" id="reel" hidden>
+  <div class="reel-frame" id="reel-frame">
+    <div class="reel-head">
+      <span class="reel-badge">DEMO · NO LIGHTS NEEDED</span>
+      <p class="reel-title" id="reel-title">Run a light show<br>in your browser.</p>
+    </div>
+    <div id="reel-stage"></div>
+    <div class="reel-strip">
+      <span class="reel-bo" id="reel-bo" hidden>BLACKOUT</span>
+      <div class="nn"><small class="now">NOW</small><span id="reel-now">—</span></div>
+      <div class="nn"><small>NEXT</small><span class="next" id="reel-next">—</span></div>
+      <span class="reel-go" id="reel-go">GO</span>
+    </div>
+    <p class="reel-caption" id="reel-caption">Pick a light. Colour it. CAPTURE. GO.</p>
+    <div class="reel-foot">
+      <span class="mono">questageapp.com</span>
+      <span class="reel-mark">QUE</span>
+    </div>
+    <div class="reel-end" id="reel-end" hidden>
+      <span class="reel-mark big">QUE</span>
+      <span class="reel-end-sub">Stage lighting for Philips Hue</span>
+      <span class="mono reel-end-url">questageapp.com</span>
+    </div>
+  </div>
+</div>
+
+<script src="assets/stage.js"></script>
+<script src="assets/experience.js"></script>
+</body>
+</html>
