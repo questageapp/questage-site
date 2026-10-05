@@ -231,7 +231,7 @@ section.band.dark { border-top-color: var(--canvas); }
 .legal p, .legal li { font-size: 16px; line-height: 1.65; color: var(--text-2); }
 
 @media (max-width: 600px) {
-  .wrap { padding: 0 16px; }
+  .wrap { padding-left: 16px; padding-right: 16px; }
   .hero { padding: 48px 0; gap: 32px; }
   section.band > .wrap { padding-top: 56px; padding-bottom: 56px; }
   .learn nav { position: static; }
@@ -245,3 +245,13 @@ section.band.dark { border-top-color: var(--canvas); }
 .legal .langs { font-size: 14px; margin: 0 0 24px; }
 .legal .summary { padding: 18px 22px; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper-2); color: var(--text); }
 .legal section + section, .legal [lang="tr"] { margin-top: 64px; }
+
+/* ---------- header: "Get the app" sits beside the wordmark, links on their own row on phones ---------- */
+.site-head nav { margin-left: auto; }
+@media (max-width: 760px) {
+  .site-head .wrap { padding-top: 18px; padding-bottom: 6px; row-gap: 6px; }
+  .head-cta { order: 2; margin-left: auto; min-height: 40px; padding: 0 14px; font-size: 14px; }
+  .site-head nav { order: 3; width: 100%; margin: 0 -12px; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .site-head nav::-webkit-scrollbar { display: none; }
+  .site-head nav a { flex-shrink: 0; }
+}
