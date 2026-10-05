@@ -105,7 +105,9 @@
     var cycbar = el('div', 'l cycbar', root);
     var pools = {};
     ['sl', 'sr', 'fl', 'fr'].forEach(function (id) { pools[id] = el('div', 'l pool ' + id, root); });
-    var cone = el('div', 'l cone', root);
+    // The beam is clipped to a cone, then the wrapper blurs it, so its edges are soft like real haze.
+    var coneWrap = el('div', 'cone', root);
+    var cone = el('div', 'l cone-in', coneWrap);
     var spot = el('div', 'l pool spot', root);
     el('div', 'shadow', root);
 

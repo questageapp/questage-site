@@ -157,10 +157,11 @@ section.band.dark { border-top-color: var(--canvas); }
                      mask-image: radial-gradient(ellipse 34% 42% at 42% 74%, rgba(0,0,0,.9) 0%, rgba(0,0,0,.3) 50%, transparent 75%); }
 .stage .fr { -webkit-mask-image: radial-gradient(ellipse 34% 42% at 58% 74%, rgba(0,0,0,.9) 0%, rgba(0,0,0,.3) 50%, transparent 75%);
                      mask-image: radial-gradient(ellipse 34% 42% at 58% 74%, rgba(0,0,0,.9) 0%, rgba(0,0,0,.3) 50%, transparent 75%); }
-.stage .cone { left: 30%; width: 40%; top: 9%; bottom: 8%; mix-blend-mode: screen;
-  clip-path: polygon(44% 0, 56% 0, 88% 100%, 12% 100%);
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.6));
-          mask-image: linear-gradient(to bottom, rgba(0,0,0,.25), rgba(0,0,0,.6)); }
+.stage .cone { left: 26%; width: 48%; top: 7%; bottom: 6%; mix-blend-mode: screen; filter: blur(14px); }
+.stage .cone-in { position: absolute; inset: 0;
+  clip-path: polygon(46% 0, 54% 0, 82% 100%, 18% 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,.08) 0%, rgba(0,0,0,.45) 55%, rgba(0,0,0,.55) 85%, transparent 100%);
+          mask-image: linear-gradient(to bottom, rgba(0,0,0,.08) 0%, rgba(0,0,0,.45) 55%, rgba(0,0,0,.55) 85%, transparent 100%); }
 .stage .spot { -webkit-mask-image: radial-gradient(ellipse 17% 7% at 50% 90%, #000 0%, rgba(0,0,0,.5) 55%, transparent 80%);
                        mask-image: radial-gradient(ellipse 17% 7% at 50% 90%, #000 0%, rgba(0,0,0,.5) 55%, transparent 80%); }
 .stage .shadow { left: 50%; bottom: 8%; width: 13%; height: 2.4%; transform: translateX(-50%); border-radius: 50%;

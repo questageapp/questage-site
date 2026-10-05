@@ -128,3 +128,9 @@ body.reel-mode { background: #000; overflow: hidden; }
            border: 3px solid var(--safety); color: var(--safety-text); font-size: 34px; font-weight: 700; letter-spacing: .06em; }
 .reel-bo.on { background: var(--safety); color: #fff; }
 .reel-bo[hidden] { display: none; }
+
+/* The guide closes itself a few seconds after the last step. */
+.coach { transition: opacity 400ms ease-out; }
+.coach.closing { opacity: 0; }
+.coach[hidden], #guide-again[hidden] { display: none; }
+@media (prefers-reduced-motion: reduce) { .coach { transition: none; } }

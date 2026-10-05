@@ -118,12 +118,29 @@
     else { S.blackout = false; S.fadeMs = 0; if (S.step === 4 && S.sawBlackout) S.step = 5; }
     draw();
   });
-  $('restart').addEventListener('click', function () { S = fresh(); draw(); });
+  $('restart').addEventListener('click', function () { S = fresh(); openGuide(); draw(); });
+
+  // When the last step is done, show "done" for a moment, then close the guide panel.
+  // "Show the guide" in the top bar brings it back and starts it again.
+  var closeTimer = null;
+  function closeGuideSoon() {
+    if (closeTimer || $('coach').hidden) return;
+    closeTimer = setTimeout(function () {
+      $('coach').classList.add('closing');
+      setTimeout(function () { $('coach').hidden = true; $('guide-again').hidden = false; }, 400);
+    }, 3000);
+  }
+  function openGuide() {
+    clearTimeout(closeTimer); closeTimer = null;
+    $('coach').hidden = false; $('coach').classList.remove('closing'); $('guide-again').hidden = true;
+  }
+  $('guide-again').addEventListener('click', function () { S = fresh(); openGuide(); draw(); });
 
   function draw() {
     stage.render(S.look, { fadeMs: S.fadeMs, blackout: S.blackout, selected: S.sel });
 
     var done = S.step >= 5;
+    if (done) closeGuideSoon();
     $('coach-label').textContent = done ? 'TRY IT · DONE' : 'TRY IT · ' + (S.step + 1) + ' / 5';
     $('coach-text').textContent = STEPS[Math.min(S.step, 5)];
     dots.forEach(function (d, k) { d.className = k < S.step ? 'done' : (k === S.step ? 'cur' : ''); });
