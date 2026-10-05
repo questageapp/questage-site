@@ -211,7 +211,7 @@ section.band.dark { border-top-color: var(--canvas); }
 .kbd { font-family: var(--mono); font-size: .92em; padding: 1px 6px; border: 1px solid var(--rule-strong); border-radius: 4px; background: var(--paper-2); white-space: nowrap; }
 
 /* ---------- library ---------- */
-.lib-hero { padding: 72px 0 48px; display: flex; flex-direction: column; gap: 16px; }
+.lib-hero { padding-top: 72px; padding-bottom: 48px; display: flex; flex-direction: column; gap: 16px; }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; margin-top: 28px; }
 .cards.pal { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
 .card { display: flex; flex-direction: column; gap: 6px; padding: 20px; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }

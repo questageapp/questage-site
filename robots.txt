@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://questageapp.com/sitemap.xml
