@@ -1,4 +1,4 @@
-/* QUE Stage website — the virtual stage.
+/* QUE Stage website: the virtual stage.
    Draws a small theatre with six lights and a wooden mannequin, all in the browser.
    It never talks to a Hue Bridge or a QUE server: it only shows what the lights would do. */
 (function () {

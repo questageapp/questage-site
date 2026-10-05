@@ -1,4 +1,4 @@
-/* QUE Stage website — the Experience demo.
+/* QUE Stage website: the Experience demo.
    A small, browser-only imitation of QUE's LIVE + cue list. It never connects to a Hue Bridge or a QUE server.
    A cue here is a raw snapshot of every fixture (colour + level), like QUE's cues. */
 (function () {
@@ -16,7 +16,7 @@
   /* ======================= Interactive demo ======================= */
   var STEPS = [
     'Press GO to run the first cue.',
-    'Tap a light — on the stage or in the list.',
+    'Tap a light on the stage or in the list.',
     'Give it a colour and a brightness.',
     'Press CAPTURE to save your look as a new cue.',
     'Press BLACKOUT. Then RELEASE.',
@@ -187,7 +187,7 @@
     $('blackout').textContent = S.blackout ? 'RELEASE' : 'BLACKOUT';
     $('blackout').setAttribute('aria-pressed', S.blackout ? 'true' : 'false');
     $('bo-banner').hidden = !S.blackout;
-    $('now').textContent = S.now >= 0 ? (S.now + 1) + '  ' + S.cues[S.now].name : '—';
+    $('now').textContent = S.now >= 0 ? (S.now + 1) + '  ' + S.cues[S.now].name : 'None';
     $('next').textContent = n >= 0 ? (n + 1) + '  ' + S.cues[n].name : 'End of list';
     $('go').disabled = n < 0;
     $('back').disabled = S.now <= 0;
