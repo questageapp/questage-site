@@ -1,0 +1,10 @@
+# Diagnostic only: checks whether GitHub gives this account a hosted runner. Safe to delete.
+name: runner-check
+on:
+  push:
+    branches: [diag-runner]
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "runner ok"
