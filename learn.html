@@ -56,6 +56,12 @@
       <a href="#import"><span class="mono">05</span>Import palettes and FX</a>
       <a href="#network"><span class="mono">06</span>Local Network permission</a>
     </div>
+    <div>
+      <p class="eyebrow">Show ready</p>
+      <a href="#rig"><span class="mono">07</span>Plan your rig</a>
+      <a href="#show-network"><span class="mono">08</span>Set up the show network</a>
+      <a href="#show-day"><span class="mono">09</span>On show day</a>
+    </div>
   </nav>
 
   <article>
@@ -213,6 +219,45 @@
         <li><div><h3>Allow when asked</h3><p>The first time QUE looks for your Bridge, your device asks for Local Network access. Choose Allow.</p></div></li>
         <li><div><h3>If you chose Don’t Allow</h3><p>Open the Settings app, go to Privacy &amp; Security → Local Network and turn QUE Stage on.</p></div></li>
         <li><div><h3>Still no Bridge?</h3><p>Check that the device and the Bridge are on the same network, then write to <a href="mailto:info@matukufilm.com">info@matukufilm.com</a>.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="guide" id="rig">
+      <p class="eyebrow">Guide 07</p>
+      <h2>Plan your rig</h2>
+      <p>What we learned running real shows with Hue. Plan around these and the rig stays fast.</p>
+      <ol>
+        <li><div><h3>Ten fast lights per Bridge</h3><p>Hue streams up to 10 lights per Bridge through an Entertainment area. Streamed lights follow chases, FX and quick cues instantly. Lights outside the area still work, but they share a slower path of about ten commands a second, so big changes can arrive with a visible lag.</p></div></li>
+        <li><div><h3>More than ten? Add a Bridge</h3><p>Each extra Bridge streams its own 10 lights, and QUE Stage runs all of them as one stage. A second Bridge is the reliable way to grow past ten. A Hue Bridge Pro connects more lights, but it still streams 10.</p></div></li>
+        <li><div><h3>Stream the lights that move</h3><p>Put the lights you chase, flash or cue quickly into the Entertainment area. Washes that change slowly can stay outside it.</p></div></li>
+        <li><div><h3>Light strips count, and use channels</h3><p>A gradient strip such as Hue Flux takes one of the 10 places and several of the area's 20 channels. While streamed it shows separate colour sections; outside the area it shows one colour.</p></div></li>
+        <li><div><h3>Keep chases slower outside the area</h3><p>On lights that are not streamed, keep each chase step above about one second. Faster steps arrive late or get skipped.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="guide" id="show-network">
+      <p class="eyebrow">Guide 08</p>
+      <h2>Set up the show network</h2>
+      <p>Most problems on show day are network problems. Ten minutes here saves the evening.</p>
+      <ol>
+        <li><div><h3>Your own router, Bridge on a cable</h3><p>Connect every Hue Bridge to your own router with an Ethernet cable. Do not rely on the venue or audience Wi-Fi.</p></div></li>
+        <li><div><h3>5 GHz for your devices</h3><p>Hue lights talk on the 2.4 GHz band. Connect your Mac, iPad and iPhone to 5 GHz, or the Mac by cable, and leave 2.4 GHz to the lights.</p></div></li>
+        <li><div><h3>Fixed channels</h3><p>Set the router's 2.4 GHz Wi-Fi to a fixed channel such as 1 or 11 instead of automatic. In the Hue app, choose a Zigbee channel away from it. With two Bridges, give each one a different Zigbee channel.</p></div></li>
+        <li><div><h3>Place the Bridge in the open</h3><p>Keep each Bridge one to two metres from the router, out of metal racks and cases, high up and facing the stage. Keep two Bridges at least a metre apart.</p></div></li>
+        <li><div><h3>Reserve its address</h3><p>In your router, reserve a fixed address for each Bridge. QUE Stage still finds it on its own; this just makes reconnecting faster.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="guide" id="show-day">
+      <p class="eyebrow">Guide 09</p>
+      <h2>On show day</h2>
+      <p>A short routine before the doors open.</p>
+      <ol>
+        <li><div><h3>Nothing else talks to the Bridge</h3><p>Turn off Hue app automations, timers, motion sensors and Hue Sync on the show Bridges. Anything else that sends commands will fight your cues.</p></div></li>
+        <li><div><h3>Check the Entertainment area</h3><p>Open the Hue app and make sure the area is still there with all its lights. We have seen an area go missing on a show day.</p></div></li>
+        <li><div><h3>Restart, then IDENTIFY</h3><p>About an hour before the show, unplug each Bridge for ten seconds. When QUE Stage is ready, IDENTIFY every fixture and press BLACKOUT, then RELEASE.</p></div></li>
+        <li><div><h3>Two copies, no updates</h3><p>Keep the show file on two devices or a USB stick, and do not update the app between the last rehearsal and the show.</p></div></li>
+        <li><div><h3>Not emergency lighting</h3><p>QUE Stage runs show lighting. It does not replace the venue's emergency and safety lighting.</p></div></li>
       </ol>
     </section>
   </article>
